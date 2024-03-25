@@ -1,7 +1,14 @@
 name ci
-  on release:
+  on:
+  release:
     type: [created]
 
 jobs:
   docker:
   runs-on: ubuntu-latest
+  steps: 
+    - name: checkout
+      uses: actions/checkout@4
+   -  run: npm run build
+    -  name: Set up Docker Buildx
+      uses
