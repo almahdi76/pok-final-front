@@ -1,0 +1,7 @@
+name ci
+  on release:
+    type: [created]
+
+jobs:
+  docker:
+  runs-on: ubuntu-latest
